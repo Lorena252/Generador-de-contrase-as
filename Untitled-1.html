@@ -8,13 +8,133 @@
     <title>Generador de contraseñas</title>
 </head>
 <body>
-    
+     <header >
+        <h1 class="titulo-contraseña"> Password Generator
+            <i class="fa-sharp fa-solid fa-key" style="color: rgb(197, 171, 56);"></i>
+          </h1>
+        </header>
 
-
-
-
-
-
+        <section class="caja-contenedora"> 
+           <main class="caja-contenedora-dos">
+      
+              
+      <div class="primer-caja">
+          <div class="primer-caja-interna">
+       <form action="">
+          <input type="inp-password" type="text" id="password">
+       </form>
+      <button class="btn-copy" id="btn-copy" name="button"><i class="fa-regular fa-copy"></i></button>
+      
+      
+      <button class="btn-rotate" id="btn-rotate" name="button" value="button"> <i class="fa-sharp fa-solid fa-rotate"></i></button>
+      
+      </div>
+      
+      
+      </div>
+      
+      
+      
+      <div class="segunda-caja">
+           <h3 class="caja-titulo">Personalice su contraseña</h3> 
+        
+       <div class="caja-check-grande">
+         
+            <div class="caja-longitud">
+         <h4>Longitud</h4>
+      
+      
+         <div class="caja-check">
+          <input  type="radio"id="input-Doce" value="12" name="radio-longitud" >
+          <label  for="input-Doce">
+        12 caracteres
+          </label>
+        </div>
+      
+        <div class="caja-check">
+          <input type="radio"  id="input-Nueve" value="9" name="radio-longitud" >
+          <label  for="input-Nueve">
+            9 caracteres
+          </label>
+        </div>
+      
+        <div class="caja-check">
+          <input type="radio" id="input-Seis" value="6"  name="radio-longitud">
+          <label  for="input-Seis">
+          6 caracteres
+          </label>
+        </div>
+      </div>
+      
+      
+      <div class="caja-reglas">
+          <h4>Reglas</h4>
+      
+      
+          <div class="caja-check">
+              <input  type="radio"  id="input-Letras" value="text"  name="radio-reglas">
+              <label  for="input-Letras">
+               Solo letras
+              </label>
+            </div>
+      
+            <div class="caja-check">
+              <input  type="radio" id="input-Solo" value=""  name="radio-reglas">
+              <label  for="input-Solo">
+             Solo numeros
+              </label>
+            </div>
+      
+            <div class="caja-check">
+              <input  type="radio"  id="input-caracteres" value="" name="radio-reglas" >
+              <label  for="input-caracteres">
+               Todos los caracteres
+              </label>
+            </div>
+      </div>
+      
+      <div class="caja-caracteres">
+          <h4>Caracteres</h4>
+      
+          <div class="caja-check">
+              <input  type="checkbox" id="check-mayuscula">
+              <label  for="check-mayuscula">
+              Mayúsculas
+              </label>
+            </div>
+            <div class="caja-check">
+              <input type="checkbox" value="text" id="check-minuscula">
+              <label  for="check-minuscula">
+                Misnúsculas
+              </label>
+            </div>
+            <div class="caja-check">
+              <input  type="checkbox" value="number" id="check-numeros">
+              <label  for="check-numeros">
+               Números
+              </label>
+            </div>
+      
+      
+            <div class="caja-check">
+              <input  type="checkbox" value="" id="check-simbolos">
+              <label for="check-simbolos">
+              Símbolos
+              </label>
+            </div>
+          
+          </div>
+          </div>
+          
+          </div>
+          
+      </main>   
+          
+      </section>
+      
+      
+      
+      
 
     <script src="java-scrip/scrip.js"></script>
 </body>
