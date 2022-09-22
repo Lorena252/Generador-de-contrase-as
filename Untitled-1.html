@@ -11,23 +11,23 @@
 <body>
      <header >
         <h1 class="titulo-contraseña"> Password Generator
-            <i class="fa-solid fa-robot" style="color: rgb(197, 171, 56);"></i>
+            <i class="fa-solid fa-robot" style="color: rgb(124, 105, 19);"></i>
           </h1>
         </header>
-
+    
         <section > 
            <main >
       
               
       <div class="primer-caja">
           <div class="primer-caja-interna">
-       <form action="">
-          <input class="input-password" type="inp-password" type="text" id="password" >
+       <form id="generar-contraseña" >
+         <input class="input-password"  type="text" id="password" value="">
        </form>
-      <button class="btn-copia" id="btn-copy" name="button"><i class="fa-regular fa-copy"></i></button>
+      <button class="btn-copia"  id="btn-copia" name="button"><i class="fa-regular fa-copy"></i></button>
+      <!-- <input type="button"> -->
       
-      
-      <button class="btn-generar" id="btn-rotate" name="button" value="button"> <i class="fa-sharp fa-solid fa-rotate"></i></button>
+      <button class="btn-generar" id="btn-generar" name="button" value="button"> <i class="fa-sharp fa-solid fa-rotate"></i></button>
       
       </div>
       
@@ -46,21 +46,21 @@
       
       
          <div class="caja-check">
-          <input  type="radio"id="input-Doce" value="12" name="radio-longitud" >
+          <input  type="radio" id="input-doce" value="12"  name="radio-longitud" >
           <label  for="input-Doce">
         12 caracteres
           </label>
         </div>
       
         <div class="caja-check">
-          <input type="radio"  id="input-Nueve" value="9" name="radio-longitud" >
+          <input type="radio"  id="input-nueve" value="9" name="radio-longitud" >
           <label  for="input-Nueve">
             9 caracteres
           </label>
         </div>
       
         <div class="caja-check">
-          <input type="radio" id="input-Seis" value="6"  name="radio-longitud">
+          <input type="radio" id="input-seis" value="6"  name="radio-longitud">
           <label  for="input-Seis">
           6 caracteres
           </label>
@@ -73,21 +73,21 @@
       
       
           <div class="caja-check">
-              <input  type="radio"  id="input-Letras" value="text"  name="radio-reglas">
-              <label  for="input-Letras">
+              <input  type="radio"   id="input-letras" value="text"  name="regla">
+              <label  for="input-letras">
                Solo letras
               </label>
             </div>
       
             <div class="caja-check">
-              <input  type="radio" id="input-Solo" value=""  name="radio-reglas">
-              <label  for="input-Solo">
+              <input  type="radio"  id="input-solo-numeros" value=""  name="regla">
+              <label  for="input-solo">
              Solo numeros
               </label>
             </div>
       
             <div class="caja-check">
-              <input  type="radio"  id="input-caracteres" value="" name="radio-reglas" >
+              <input  type="radio"  id="input-caracteres" value="" name="regla" >
               <label  for="input-caracteres">
                Todos los caracteres
               </label>
@@ -98,19 +98,19 @@
           <h4>Caracteres</h4>
       
           <div class="caja-check">
-              <input  type="checkbox" id="check-mayuscula">
+              <input  type="checkbox" id="check-mayuscula"  name="mayusculas" value="text">
               <label  for="check-mayuscula">
               Mayúsculas
               </label>
             </div>
             <div class="caja-check">
-              <input type="checkbox" value="text" id="check-minuscula">
+              <input type="checkbox" value="text" id="check-minuscula" name="minusculas">
               <label  for="check-minuscula">
                 Misnúsculas
               </label>
             </div>
             <div class="caja-check">
-              <input  type="checkbox" value="number" id="check-numeros">
+              <input  type="checkbox" value="number" id="check-numeros" name="numeros" >
               <label  for="check-numeros">
                Números
               </label>
@@ -118,7 +118,7 @@
       
       
             <div class="caja-check">
-              <input  type="checkbox" value="" id="check-simbolos">
+              <input  type="checkbox" value="number" id= "check-simbolos"  name="simbolos" >
               <label for="check-simbolos">
               Símbolos
               </label>
