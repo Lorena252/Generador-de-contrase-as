@@ -1,5 +1,4 @@
 let password = document.getElementById("password")
-let generarContraseña = document.getElementById("generar-contraseña")
 const btnCopia =  document.getElementById("btn-copia")
 const btnGenerar =  document.getElementById("btn-generar")
 
@@ -88,19 +87,22 @@ if (inputSimbolos.checked){
 
 //concatena mi seleccion de opciones//
 
-let contraseña = ""
+// let contraseña = ""
 
  const concatenarOpciones = () =>{
    contraseña= (opcionSeleccionada.join(''))
-  return contraseña
+  // return contraseña
 } 
 
- // PINTA EL INPUT PASSWORD / Se me concatenan los datos//
+ //PINTA EL INPUT PASSWORD / Se me concatenan los datos//
+
 btnGenerar.addEventListener("click" , () =>{
-opcionSeleccionada
-concatenarOpciones()
-generarContraseniaFinal(longitud)
-     document.getElementById("password").value = passwordd;
+
+ concatenarOpciones()
+ generarContraseniaFinal(longitud)
+     document.getElementById("password").value = clave;
+clave = ""
+
 })
 
 
@@ -152,16 +154,21 @@ inputNueve.addEventListener("change", ()=>{
 
 // Me genera la clave!!! // 
 
-let passwordd = ""
+let clave = ""
 
 const generarContraseniaFinal = (longitud) =>{
-    // let passwordd = ""
+ 
   for (let x = 0; x < longitud; x++){
 let aleatorio =  Math.floor(Math.random() * contraseña.length);
- passwordd += contraseña.charAt(aleatorio);
+clave+= contraseña.charAt(aleatorio);
   } 
 
-return passwordd
+return clave
 
 };
-generarContraseniaFinal(longitud)
+
+
+
+
+
+
