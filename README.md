@@ -1,4 +1,4 @@
-# Generador de contrasenias :key: :lock:
+# Generador de contraseñas :key: :lock:
 
 -En este proyecto se puede apreciar la propuesta realizada por Ada, en la cual pude diseñar un generador de contraseñas.
 
