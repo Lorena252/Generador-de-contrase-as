@@ -6,6 +6,8 @@
 
 -Posee tres opciones para configurar la longitud de la misma.
 
+-Un botón generar el cual al clickear genera la contraseña.
+
 -Un botón copiar que selecciona la contraseña para poder guardarla o usarla de una manera mas práctica.
 
 
