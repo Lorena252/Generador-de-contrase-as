@@ -5,7 +5,6 @@
   
   
   body{
-
 background-image: url(assets/flores.png) ;
 
   } 
@@ -13,14 +12,12 @@ background-image: url(assets/flores.png) ;
  section{
    display: flex;
    justify-content: center;
-  
   }
   
 main{
-margin-top: 60px;
-    padding: 15px 15px 15px 15px;
-    background-color: rgb(17, 94, 30);
-
+  margin-top: 60px;
+  padding: 15px 15px 15px 15px;
+  background-color: rgb(17, 94, 30);
   }
   
  @media (min-width:300px) and (max-width:900px){
@@ -45,7 +42,7 @@ margin-top: 60px;
 }
   @media (min-width:300px) and (max-width:900px){
    header{
-display: none;
+    display: none;
 
       } 
      }
@@ -69,10 +66,6 @@ display: none;
     height: 100px;
        } 
       }
-
-
-
-
 
  .primer-caja-interna{
     background-color: rgb(219, 172, 43);
@@ -103,8 +96,6 @@ display: none;
      height: 40px;
         } 
        }
-
-  
   .btn-generar, .btn-copia{
     width: 40px;
     height: 40px;
@@ -122,7 +113,6 @@ display: none;
   }
   
   
-  
   h4{
    color: rgb(27, 49, 4);
    padding-bottom: 10px;
@@ -134,8 +124,7 @@ display: none;
             } 
            }
 
-  
-  
+
   .caja-titulo{
     color: rgb(9, 39, 15) ;
     font-size:x-large;
@@ -170,8 +159,6 @@ display: none;
       } 
      }
 
-
-  
 .segunda-caja{
     background-color:  rgb(219, 172, 43);
     margin-top:20px ;
@@ -184,6 +171,5 @@ display: none;
     display: block;
    height: 500px;
 
-  
       } 
      }

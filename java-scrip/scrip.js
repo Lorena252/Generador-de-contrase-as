@@ -17,6 +17,41 @@ const minusculas = "abcdefghijklmnopkrstuvwxyz"
 const numeros =  "123456789"
 const simbolos = "%$^&!#"
 
+
+let longitud = []
+inputDoce.addEventListener("change", ()=>{
+ if (inputDoce.checked){
+  let numero = 12
+ longitud.push(numero)
+ }
+ else{
+  longitud.pop(numero)
+}
+})
+
+
+inputNueve.addEventListener("change", ()=>{
+  if (inputNueve.checked){
+    let numero = 9
+  longitud.push(numero)
+  }
+  else{
+    longitud.pop(numero)
+  }
+  })
+
+
+  inputSeis.addEventListener("change", ()=>{
+    if (inputSeis.checked){
+      let numero = 6
+    longitud.push(numero)
+    }
+    else{
+      longitud.pop(numero)
+    }
+    })
+
+
 inputLetras.addEventListener ("change", (e) =>{
   inputNumeros.disabled = !event.target.cheked;
   inputSimbolos.disabled = !event.target.cheked;
@@ -79,60 +114,29 @@ const concatenarOpciones = () =>{
 } 
 
 
-btnGenerar.addEventListener("click" , () =>{
- concatenarOpciones()
- generarContraseniaFinal(longitud)
-     document.getElementById("password").value = clave;
- clave = ""
-})
-
-btnCopia.addEventListener("click", (e)=>{
- event.preventDefault();
- password.select();
- document.execCommand("copy");
- password.style.backgroundColor = "yellow" 
-} )
-
-
-let longitud = []
-inputDoce.addEventListener("change", ()=>{
- if (inputDoce.checked){
-  let numero = 12
- longitud.push(numero)
- }
- else{
-  longitud = []
-}
-})
-
-
-inputNueve.addEventListener("change", ()=>{
-  if (inputNueve.checked){
-    let numero = 9
-  longitud.push(numero)
-  }
-  else{
-    longitud.pop(numero)
-  }
-  })
-
-
-  inputSeis.addEventListener("change", ()=>{
-    if (inputSeis.checked){
-      let numero = 6
-    longitud.push(numero)
-    }
-    else{
-      longitud.pop(numero)
-    }
-    })
-
-
 let clave = ""
 const generarContraseniaFinal = (longitud) =>{
   for (let x = 0; x < longitud; x++){
 let aleatorio =  Math.floor(Math.random() * contraseña.length);
 clave+= contraseña.charAt(aleatorio);
-  } 
+  }
+
 return clave
 };
+
+
+btnGenerar.addEventListener("click" , () =>{
+  opcionSeleccionada
+  concatenarOpciones()
+  generarContraseniaFinal(longitud)
+      document.getElementById("password").value = clave;
+  clave = ""
+ })
+ 
+ btnCopia.addEventListener("click", (e)=>{
+ event.preventDefault();
+   password.select();
+  document.execCommand("copy");
+ password.style.backgroundColor = "yellow" 
+ } )
+ 
