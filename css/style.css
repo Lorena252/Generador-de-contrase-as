@@ -4,10 +4,9 @@
   }
   
   
-  body{
-background-image: url(assets/flores.png) ;
-
-  } 
+body{
+background-image: url(../assets/flores.png) ;
+  }  
   
  section{
    display: flex;
