@@ -19,95 +19,99 @@ const simbolos = "%$^&!#"
 
 
 let longitud = []
+
 inputDoce.addEventListener("change", ()=>{
  if (inputDoce.checked){
-  let numero = 12
- longitud.push(numero)
+    let numero = 12
+    longitud.push(numero)
  }
  else{
-  longitud.pop(numero)
-}
-})
+  longitud.pop()
+}})
 
 
 inputNueve.addEventListener("change", ()=>{
   if (inputNueve.checked){
     let numero = 9
-  longitud.push(numero)
+    longitud.push(numero)
   }
   else{
-    longitud.pop(numero)
-  }
-  })
-
+    longitud.pop()
+  }})
+  
 
   inputSeis.addEventListener("change", ()=>{
     if (inputSeis.checked){
       let numero = 6
-    longitud.push(numero)
+      longitud.push(numero)
     }
     else{
-      longitud.pop(numero)
-    }
-    })
-
-
+      longitud.pop()
+    }})
+    
 inputLetras.addEventListener ("change", (e) =>{
-  inputNumeros.disabled = !event.target.cheked;
-  inputSimbolos.disabled = !event.target.cheked;
-  inputMayusculas.disabled = event.target.cheked;
-  inputMinusculas.disabled = event.target.cheked;
+  inputSimbolos.checked = false
+  inputNumeros.checked = false
+  if(inputLetras.checked)
+  inputNumeros.disabled = event.target.checked 
+  inputSimbolos.disabled = event.target.checked;
+  inputMayusculas.disabled = !event.target.checked;
+  inputMinusculas.disabled = !event.target.checked;
 }, false);
 
 inputSoloNumeros.addEventListener("change", (e) =>{
-inputMayusculas.disabled = !event.target.cheked;
-inputMinusculas.disabled = !event.target.cheked;
-inputSimbolos.disabled = !event.target.cheked;
-inputNumeros.disabled = event.target.cheked;
- }, false);
+  inputMayusculas.checked = false
+  inputMinusculas.checked = false
+  inputSimbolos.checked = false
+  if(inputSoloNumeros.checked) 
+inputMayusculas.disabled= event.target.checked;
+inputMinusculas.disabled = event.target.checked;
+inputSimbolos.disabled = event.target.checked;
+inputNumeros.disabled = !event.target.checked;
+ },false)
 
  inputCaracteres.addEventListener("change", (e) =>{
-  if (inputCaracteres.checked)
-inputMayusculas.disabled = event.target.cheked;
-inputMinusculas.disabled = event.target.cheked;
-inputSimbolos.disabled = event.target.cheked;
-inputNumeros.disabled = event.target.cheked;
-}, false)
+  if(inputCaracteres.checked)
+inputMayusculas.disabled = !event.target.checked;
+inputMinusculas.disabled = !event.target.checked;
+inputSimbolos.disabled = !event.target.checked;
+inputNumeros.disabled = !event.target.checked;
+},false)
 
 inputMayusculas.addEventListener("click",  ()=> {
-    if (inputMayusculas.checked) {
+    if(inputMayusculas.checked) {
        opcionSeleccionada.push(mayusculas) 
-    } else{
-      opcionSeleccionada.pop(mayusculas)
-    }
- })
+    }else{
+      opcionSeleccionada.pop()
+    }})
+ 
 
 inputMinusculas.addEventListener("click", () =>{
 if (inputMinusculas.checked){
   opcionSeleccionada.push(minusculas)
 }else{
-  opcionSeleccionada.pop(minusculas)
+  opcionSeleccionada.pop()
 }
 })
 
 inputNumeros.addEventListener("click", () => {
   if (inputNumeros.checked){
-    opcionSeleccionada.push( numeros) 
+     opcionSeleccionada.push(numeros)  
   }
   else{
-    opcionSeleccionada.pop(numeros)
+   opcionSeleccionada.pop()
   }
 })
 
 inputSimbolos.addEventListener("click", () =>{
-if (inputSimbolos.checked){
+  if(inputSimbolos.checked){
    opcionSeleccionada.push(simbolos) 
 }
-   else{
-    opcionSeleccionada.pop(simbolos)
+else{
+    opcionSeleccionada.pop()
    }
 })
-
+ 
 
 const concatenarOpciones = () =>{
    contraseña= (opcionSeleccionada.join(''))
@@ -116,11 +120,11 @@ const concatenarOpciones = () =>{
 
 let clave = ""
 const generarContraseniaFinal = (longitud) =>{
+  longitud = longitud[longitud.length-1]
   for (let x = 0; x < longitud; x++){
 let aleatorio =  Math.floor(Math.random() * contraseña.length);
 clave+= contraseña.charAt(aleatorio);
   }
-
 return clave
 };
 
@@ -138,5 +142,5 @@ btnGenerar.addEventListener("click" , () =>{
    password.select();
   document.execCommand("copy");
  password.style.backgroundColor = "yellow" 
- } )
+ })
  
