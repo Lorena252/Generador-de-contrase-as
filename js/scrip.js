@@ -18,6 +18,7 @@ const numeros =  "123456789"
 const simbolos = "%$^&!#"
 
 
+
 let longitud = []
 
 inputDoce.addEventListener("change", ()=>{
@@ -50,6 +51,7 @@ inputNueve.addEventListener("change", ()=>{
     }})
     
 inputLetras.addEventListener ("change", (e) =>{
+  opcionSeleccionada.length = 0;
   inputSimbolos.checked = false
   inputNumeros.checked = false
   if(inputLetras.checked)
@@ -60,14 +62,15 @@ inputLetras.addEventListener ("change", (e) =>{
 }, false);
 
 inputSoloNumeros.addEventListener("change", (e) =>{
+  opcionSeleccionada.length = 0;
   inputMayusculas.checked = false
   inputMinusculas.checked = false
   inputSimbolos.checked = false
   if(inputSoloNumeros.checked) 
-inputMayusculas.disabled= event.target.checked;
-inputMinusculas.disabled = event.target.checked;
-inputSimbolos.disabled = event.target.checked;
-inputNumeros.disabled = !event.target.checked;
+  inputMayusculas.disabled= event.target.checked;
+  inputMinusculas.disabled = event.target.checked;
+  inputSimbolos.disabled = event.target.checked;
+  inputNumeros.disabled = !event.target.checked 
  },false)
 
  inputCaracteres.addEventListener("change", (e) =>{
@@ -99,7 +102,7 @@ inputNumeros.addEventListener("click", () => {
      opcionSeleccionada.push(numeros)  
   }
   else{
-   opcionSeleccionada.pop()
+ opcionSeleccionada.pop()
   }
 })
 
@@ -126,6 +129,7 @@ let aleatorio =  Math.floor(Math.random() * contraseña.length);
 clave+= contraseña.charAt(aleatorio);
   }
 return clave
+
 };
 
 
@@ -144,3 +148,5 @@ btnGenerar.addEventListener("click" , () =>{
  password.style.backgroundColor = "yellow" 
  })
  
+
+
